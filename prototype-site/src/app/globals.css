@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --cream: #f5f3ee;
+  --ink: #1f1f1f;
+  --accent: #4f6bff; /* the blue cursor */
+}
+
+@theme inline {
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+  --color-accent: var(--accent);
+  --font-serif: var(--font-instrument), Georgia, serif;
+  --font-pixel: var(--font-vt323), monospace;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--ink);
+  background-image:
+    linear-gradient(rgba(0,0,0,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.06) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+.cursor { animation: blink 1s steps(1) infinite; }
